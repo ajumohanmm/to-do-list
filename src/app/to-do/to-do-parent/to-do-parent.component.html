@@ -1,0 +1,7 @@
+<div style="border-width: 0px 3px;border-color: black;border-style: double;padding: 5px 10px;">
+    <ng-container *ngFor="let todo of toDoList">
+        <app-to-do-child [toDoItem]="todo"></app-to-do-child>
+    </ng-container>
+    <input type="text" [(ngModel)]="newToDoItem">&nbsp;&nbsp;
+    <input type="button" value="+" (click)="addItem()">
+</div>

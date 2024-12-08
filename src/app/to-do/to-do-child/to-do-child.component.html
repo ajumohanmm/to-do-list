@@ -1,0 +1,7 @@
+<p *ngIf="toDoItem != null">
+    <input type="checkbox" 
+        [checked]="toDoItem?.completed" 
+        (change)="toDoItem.completed = !toDoItem?.completed">
+    <span *ngIf="toDoItem?.completed"><s>{{ toDoItem?.name }}</s></span>
+    <span *ngIf="!toDoItem?.completed">{{ toDoItem?.name }}</span>
+</p>
